@@ -64,6 +64,7 @@ function teamAnimation() {
     el.addEventListener("mousemove", (dets) => {
       gsap.to(el.querySelector(".picture"), {
         opacity: 1,
+        scale: 1,
         duration: 0.2,
         x: gsap.utils.mapRange(0, window.innerWidth, -220, 220, dets.clientX),
         y: gsap.utils.mapRange(0, window.innerWidth, -50, 50, dets.clientY),
@@ -74,6 +75,7 @@ function teamAnimation() {
     el.addEventListener("mouseleave", (dets) => {
       gsap.to(el.querySelector(".picture"), {
         opacity: 0,
+        scale: 0,
         duration: 0.2,
         ease: Power4,
       });
